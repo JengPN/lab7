@@ -3,6 +3,25 @@
 using namespace std;
 
 
+int adiff(int a, int b)
+{
+  int c;
+  if(a > b)
+  {
+    c = a-b;
+  }else{
+    c = b-a;
+  }
+
+  c = c%360;
+  if(c > 180)
+  {
+    c = 360-c;
+  }
+  return c;
+}
+
+
 int main(){
   cout << adiff(180,270);
   cout << adiff(210,45);
@@ -13,3 +32,4 @@ int main(){
   cout << adiff(1000,280);
   cout << adiff(60,244);
 }
+
